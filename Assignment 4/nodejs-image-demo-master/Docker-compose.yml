@@ -1,0 +1,13 @@
+services:
+  web:
+    build: .
+    ports:
+      - "8080:8080"
+    volumes:
+      
+      - .:/usr/src/app
+    working_dir: /usr/src/app
+    
+    user: root
+    
+    command: sh -c "npm install && node app.js"
